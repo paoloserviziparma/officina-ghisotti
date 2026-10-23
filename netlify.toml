@@ -8,17 +8,17 @@
 # Indirizzi del vecchio sito Wix -> nuove pagine (301 = spostamento permanente, utile per la SEO)
 [[redirects]]
   from = "/post/*"
-  to = "/#news"
+  to = "/"
   status = 301
 
 [[redirects]]
   from = "/blog"
-  to = "/#news"
+  to = "/"
   status = 301
 
 [[redirects]]
   from = "/blog/*"
-  to = "/#news"
+  to = "/"
   status = 301
 
 # Intestazioni di sicurezza per tutte le pagine
