@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /grazie/
+Disallow: /en/thank-you/
+Disallow: /fr/merci/
+
+Sitemap: https://www.officinaghisotti.it/sitemap.xml

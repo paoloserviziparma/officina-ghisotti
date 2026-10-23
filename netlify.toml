@@ -1,0 +1,54 @@
+# Officina Agricola Ghisotti Emanuele – configurazione Netlify
+# Sito statico: nessun comando di build, si pubblica la cartella principale.
+
+[build]
+  publish = "."
+  command = ""
+
+# Indirizzi del vecchio sito Wix -> nuove pagine (301 = spostamento permanente, utile per la SEO)
+[[redirects]]
+  from = "/post/*"
+  to = "/#news"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/#news"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/#news"
+  status = 301
+
+# Intestazioni di sicurezza per tutte le pagine
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# I font non cambiano mai: cache di un anno
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Immagini, CSS e JS: cache di una settimana
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"

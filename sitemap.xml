@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.officinaghisotti.it/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/en/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/fr/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/privacy-policy/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/cookie-policy/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+</urlset>
