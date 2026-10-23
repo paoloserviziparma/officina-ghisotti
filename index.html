@@ -45,8 +45,8 @@
 <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Apri il menu"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2"></path></svg></button>
 <nav id="menu" class="nav" aria-label="Menu principale">
 <a href="#chi-siamo">Azienda</a>
-<a href="#corone">Corone</a>
-<a href="#trivelle">Trivelle</a>
+<a href="/corone/">Corone</a>
+<a href="/trivelle/">Trivelle</a>
 <a href="#video">Video</a>
 <div class="lang" aria-label="Lingua"><a href="/" hreflang="it" aria-current="page">IT</a><a href="/en/" hreflang="en" lang="en">EN</a><a href="/fr/" hreflang="fr" lang="fr">FR</a></div>
 <a href="#contatti" class="btn" style="background: #3274A0; color: #FFFFFF; min-height: 44px; padding: 0 18px">Contatti</a>
@@ -184,6 +184,7 @@
 </div>
 </article>
 </div>
+<p class="rv" style="margin: 40px 0 0"><a class="btn" href="/corone/" style="border: 1.5px solid #0F2537; color: #0F2537">Tutto sulle corone: misure, versioni e domande frequenti <span aria-hidden="true">→</span></a></p>
 </div>
 </section>
 
@@ -226,6 +227,7 @@
 </div>
 </article>
 </div>
+<p class="rv" style="margin: 40px 0 0"><a class="btn" href="/trivelle/" style="border: 1.5px solid #4F6B82; color: #FFFFFF">Tutto sulle trivelle: misure, versioni e domande frequenti <span aria-hidden="true">→</span></a></p>
 </div>
 </section>
 
@@ -233,7 +235,29 @@
 <section id="scegli" class="wrap" style="padding-top: clamp(80px,10vw,140px); padding-bottom: clamp(80px,10vw,140px)">
 <p class="eyebrow rv" style="color: #3274A0">04 — Guida rapida</p>
 <h2 class="display rvx" style="font-size: clamp(36px,4.6vw,64px); margin-top: 20px; max-width: 900px">Corona o trivella? Scegli in base al lavoro.</h2>
-<div class="rv" style="margin-top: 48px; overflow-x: auto; border: 1.5px solid #0F2537">
+<p class="rv" style="margin: 24px 0 0; max-width: 760px; font-size: 18px; line-height: 1.6; color: #2E3F4D">Rispondi a tre domande: ti diciamo quale attrezzatura fa al caso tuo e prepariamo la richiesta di preventivo con i tuoi dati.</p>
+<form class="finder rv" style="margin-top: 36px" aria-label="Il nostro consiglio" data-l-advice="Consiglio del selettore" data-l-goal="Obiettivo" data-l-place="Luogo" data-l-size="Dimensione ceppo" data-l-tons="Peso escavatore" data-l-model="Modello">
+<div>
+<fieldset><legend><span>01</span>Cosa vuoi fare del ceppo?</legend><div class="opts"><label class="opt"><input type="radio" name="f-goal" value="extract"><span>Estrarlo intero</span></label><label class="opt"><input type="radio" name="f-goal" value="grind"><span>Macinarlo sul posto</span></label><label class="opt"><input type="radio" name="f-goal" value="unsure"><span>Non lo so</span></label></div></fieldset>
+<fieldset><legend><span>02</span>Dove si trova?</legend><div class="opts"><label class="opt"><input type="radio" name="f-place" value="city"><span>Viale, cordolo o marciapiede</span></label><label class="opt"><input type="radio" name="f-place" value="wood"><span>Bosco o terreno con molte radici</span></label><label class="opt"><input type="radio" name="f-place" value="other"><span>Giardino, campo o altro</span></label></div></fieldset>
+<fieldset><legend><span>03</span>Quanto è grande il ceppo?</legend><div class="opts"><label class="opt"><input type="radio" name="f-size" value="small"><span>Fino a 35 cm</span></label><label class="opt"><input type="radio" name="f-size" value="mid"><span>Da 35 a 60 cm</span></label><label class="opt"><input type="radio" name="f-size" value="big"><span>Oltre 60 cm</span></label></div></fieldset>
+<fieldset style="margin-bottom: 0"><legend>La tua macchina <span>(facoltativo)</span></legend><div class="mach"><label>Peso escavatore (t)<input type="number" name="f-tons" min="1" max="120" step="0.5" inputmode="decimal"></label><label>Marca e modello<input type="text" name="f-model" placeholder="Es. CAT 316" autocomplete="off"></label></div></fieldset>
+</div>
+<div class="finder-out" aria-live="polite">
+<div data-result="none"><p class="tag" style="margin: 0">Il nostro consiglio</p><p style="margin-top: 12px; font-size: 18px">Rispondi alle tre domande per vedere il nostro consiglio.</p></div>
+<div data-result="crown" hidden><p class="tag" style="margin: 0">Il nostro consiglio</p><h3>Corona levaceppi</h3><p>Taglia il terreno attorno al ceppo e lo estrae intero, lasciando un foro netto: ideale dove serve precisione, come lungo viali e cordoli.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Diametri da 35 a 60 cm, rotazione destra o sinistra.</p><p><a class="more" href="/corone/">Scopri le corone →</a></p></div>
+<div data-result="crown-wings" hidden><p class="tag" style="margin: 0">Il nostro consiglio</p><h3>Corona con ali taglia-radici</h3><p>Le ali laterali tagliano le radici mentre la corona gira: è la scelta per i ceppi nei boschi e nei terreni pieni di radici.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Diametri da 35 a 60 cm più le ali, rotazione destra o sinistra.</p><p><a class="more" href="/corone/">Scopri le corone →</a></p></div>
+<div data-result="auger-hard" hidden><p class="tag" style="margin: 0">Il nostro consiglio</p><h3>Trivella per ceppi molto duri</h3><p>Macina ceppo e radici direttamente nel terreno, anche quando il legno è duro e compatto come nei cordoli dei viali.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Larghezze da 50 a 150 cm, spessori per regolare il taglio.</p><p><a class="more" href="/trivelle/">Scopri le trivelle →</a></p></div>
+<div data-result="auger" hidden><p class="tag" style="margin: 0">Il nostro consiglio</p><h3>Trivella universale</h3><p>Riduce in trucioli ogni tipo di ceppo e lascia il terreno subito pronto da livellare o ripiantare.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Larghezze da 50 a 150 cm, spessori per regolare il taglio.</p><p><a class="more" href="/trivelle/">Scopri le trivelle →</a></p></div>
+<p data-note="big" hidden style="border-top: 1px solid #22445E; padding-top: 12px; font-size: 15px">Le corone arrivano a 60 cm di diametro: per ceppi più grandi la soluzione indicata è in genere la trivella. Verifichiamo insieme il tuo caso.</p>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px">
+<a href="#contatti" class="btn" data-finder-quote hidden style="background: #3274A0; color: #FFFFFF; justify-content: center">Richiedi il preventivo con questi dati <span aria-hidden="true">→</span></a>
+<p style="font-size: 13px; color: #9FB6C9">La misura esatta e la compatibilità con il tuo escavatore le verifichiamo noi prima del preventivo.</p>
+</div>
+</div>
+</form>
+<h3 class="rv" style="margin: 56px 0 0; font-size: 20px; font-weight: 800">Oppure consulta la tabella</h3>
+<div class="rv" style="margin-top: 20px; overflow-x: auto; border: 1.5px solid #0F2537">
 <table style="width: 100%; min-width: 680px; border-collapse: collapse; font-size: 16px; background: #FFFFFF">
 <thead>
 <tr style="background: #0F2537; color: #F5F8FA; text-align: left">
@@ -295,23 +319,24 @@
 <a class="btn rv" href="https://www.youtube.com/channel/UCeYTT8SydsbMlQ8Gb6a0rGQ" style="background: #0F2537; color: #FFFFFF">Canale YouTube <span aria-hidden="true">↗</span></a>
 </div>
 <div class="grid4" style="margin-top: 48px">
-<a class="card rv" href="https://www.youtube.com/watch?v=yg7fBFb25rY" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="yg7fBFb25rY" href="https://www.youtube.com/watch?v=yg7fBFb25rY" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #0F2537; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-macinatura-ceppi.webp" width="549" height="302" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Macinatura ceppi con trivella Ghisotti</p>
 </a>
-<a class="card rv" href="https://www.youtube.com/watch?v=omay3ggQcSo" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="omay3ggQcSo" href="https://www.youtube.com/watch?v=omay3ggQcSo" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #173248; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-levatura-ceppi.webp" width="548" height="300" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Levatura ceppi con corona</p>
 </a>
-<a class="card rv" href="https://www.youtube.com/watch?v=FBsfpej0XLs" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="FBsfpej0XLs" href="https://www.youtube.com/watch?v=FBsfpej0XLs" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #0F2537; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-trivella-lame-avvitate-1.webp" width="548" height="300" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Trivella con lame avvitate</p>
 </a>
-<a class="card rv" href="https://www.youtube.com/watch?v=N4jRROIOsd8" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="N4jRROIOsd8" href="https://www.youtube.com/watch?v=N4jRROIOsd8" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #173248; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-trivella-lame-avvitate-2.webp" width="549" height="300" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Lame avvitate: dettaglio al lavoro</p>
 </a>
 </div>
+<p class="rv" style="margin: 20px 0 0; font-size: 14px; color: #3F505E">I video si aprono qui, solo quando li avvii, e sono forniti da YouTube in modalità privacy avanzata (youtube-nocookie.com).</p>
 </div>
 </section>
 

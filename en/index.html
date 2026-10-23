@@ -44,8 +44,8 @@
 <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2"></path></svg></button>
 <nav id="menu" class="nav" aria-label="Main menu">
 <a href="#about">Company</a>
-<a href="#crowns">Crowns</a>
-<a href="#augers">Augers</a>
+<a href="/en/crowns/">Crowns</a>
+<a href="/en/augers/">Augers</a>
 <a href="#video">Video</a>
 <div class="lang" aria-label="Language"><a href="/" hreflang="it" lang="it">IT</a><a href="/en/" hreflang="en" aria-current="page">EN</a><a href="/fr/" hreflang="fr" lang="fr">FR</a></div>
 <a href="#contact" class="btn" style="background: #3274A0; color: #FFFFFF; min-height: 44px; padding: 0 18px">Contact</a>
@@ -179,6 +179,7 @@
 </div>
 </article>
 </div>
+<p class="rv" style="margin: 40px 0 0"><a class="btn" href="/en/crowns/" style="border: 1.5px solid #0F2537; color: #0F2537">Everything about the crowns: sizes, versions and FAQ <span aria-hidden="true">→</span></a></p>
 </div>
 </section>
 
@@ -219,13 +220,36 @@
 </div>
 </article>
 </div>
+<p class="rv" style="margin: 40px 0 0"><a class="btn" href="/en/augers/" style="border: 1.5px solid #4F6B82; color: #FFFFFF">Everything about the augers: sizes, versions and FAQ <span aria-hidden="true">→</span></a></p>
 </div>
 </section>
 
 <section id="choose" class="wrap" style="padding-top: clamp(80px,10vw,140px); padding-bottom: clamp(80px,10vw,140px)">
 <p class="eyebrow rv" style="color: #3274A0">04 — Quick guide</p>
 <h2 class="display rvx" style="font-size: clamp(36px,4.6vw,64px); margin-top: 20px; max-width: 900px">Crown or auger? Choose by the job.</h2>
-<div class="rv" style="margin-top: 48px; overflow-x: auto; border: 1.5px solid #0F2537">
+<p class="rv" style="margin: 24px 0 0; max-width: 760px; font-size: 18px; line-height: 1.6; color: #2E3F4D">Answer three questions: we will tell you which attachment suits you and prepare your quote request with your details.</p>
+<form class="finder rv" style="margin-top: 36px" aria-label="Our recommendation" data-l-advice="Selector recommendation" data-l-goal="Goal" data-l-place="Location" data-l-size="Stump size" data-l-tons="Excavator weight" data-l-model="Model">
+<div>
+<fieldset><legend><span>01</span>What do you want to do with the stump?</legend><div class="opts"><label class="opt"><input type="radio" name="f-goal" value="extract"><span>Pull it out whole</span></label><label class="opt"><input type="radio" name="f-goal" value="grind"><span>Grind it on site</span></label><label class="opt"><input type="radio" name="f-goal" value="unsure"><span>Not sure</span></label></div></fieldset>
+<fieldset><legend><span>02</span>Where is it?</legend><div class="opts"><label class="opt"><input type="radio" name="f-place" value="city"><span>Avenue, kerb or pavement</span></label><label class="opt"><input type="radio" name="f-place" value="wood"><span>Woodland or ground full of roots</span></label><label class="opt"><input type="radio" name="f-place" value="other"><span>Garden, field or other</span></label></div></fieldset>
+<fieldset><legend><span>03</span>How big is the stump?</legend><div class="opts"><label class="opt"><input type="radio" name="f-size" value="small"><span>Up to 35 cm</span></label><label class="opt"><input type="radio" name="f-size" value="mid"><span>35 to 60 cm</span></label><label class="opt"><input type="radio" name="f-size" value="big"><span>Over 60 cm</span></label></div></fieldset>
+<fieldset style="margin-bottom: 0"><legend>Your machine <span>(optional)</span></legend><div class="mach"><label>Excavator weight (t)<input type="number" name="f-tons" min="1" max="120" step="0.5" inputmode="decimal"></label><label>Make and model<input type="text" name="f-model" placeholder="E.g. CAT 316" autocomplete="off"></label></div></fieldset>
+</div>
+<div class="finder-out" aria-live="polite">
+<div data-result="none"><p class="tag" style="margin: 0">Our recommendation</p><p style="margin-top: 12px; font-size: 18px">Answer the three questions to see our recommendation.</p></div>
+<div data-result="crown" hidden><p class="tag" style="margin: 0">Our recommendation</p><h3>Stump removal crown</h3><p>Cuts the soil around the stump and pulls it out whole, leaving a clean hole: ideal where precision matters, such as along avenues and kerbs.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Diameters from 35 to 60 cm, right- or left-hand rotation.</p><p><a class="more" href="/en/crowns/">Discover the crowns →</a></p></div>
+<div data-result="crown-wings" hidden><p class="tag" style="margin: 0">Our recommendation</p><h3>Crown with root-cutting wings</h3><p>The side wings cut through the roots as the crown turns: the choice for stumps in woodland and root-filled ground.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Diameters from 35 to 60 cm plus wings, right- or left-hand rotation.</p><p><a class="more" href="/en/crowns/">Discover the crowns →</a></p></div>
+<div data-result="auger-hard" hidden><p class="tag" style="margin: 0">Our recommendation</p><h3>Auger for very hard stumps</h3><p>Grinds stump and roots directly in the ground, even when the wood is hard and compact as along avenue kerbs.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Widths from 50 to 150 cm, spacers to adjust the cut.</p><p><a class="more" href="/en/augers/">Discover the augers →</a></p></div>
+<div data-result="auger" hidden><p class="tag" style="margin: 0">Our recommendation</p><h3>All-purpose auger</h3><p>Reduces any kind of stump to chips and leaves the ground ready to level or replant straight away.</p><p class="mono" style="font-size: 14px; color: #9FB6C9">Widths from 50 to 150 cm, spacers to adjust the cut.</p><p><a class="more" href="/en/augers/">Discover the augers →</a></p></div>
+<p data-note="big" hidden style="border-top: 1px solid #22445E; padding-top: 12px; font-size: 15px">Crowns go up to 60 cm in diameter: for larger stumps an auger is usually the right choice. Let us check your case together.</p>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px">
+<a href="#contact" class="btn" data-finder-quote hidden style="background: #3274A0; color: #FFFFFF; justify-content: center">Request a quote with these details <span aria-hidden="true">→</span></a>
+<p style="font-size: 13px; color: #9FB6C9">We check the exact size and compatibility with your excavator before quoting.</p>
+</div>
+</div>
+</form>
+<h3 class="rv" style="margin: 56px 0 0; font-size: 20px; font-weight: 800">Or check the table</h3>
+<div class="rv" style="margin-top: 20px; overflow-x: auto; border: 1.5px solid #0F2537">
 <table style="width: 100%; min-width: 680px; border-collapse: collapse; font-size: 16px; background: #FFFFFF">
 <thead>
 <tr style="background: #0F2537; color: #F5F8FA; text-align: left">
@@ -286,23 +310,24 @@
 <a class="btn rv" href="https://www.youtube.com/channel/UCeYTT8SydsbMlQ8Gb6a0rGQ" style="background: #0F2537; color: #FFFFFF">YouTube channel <span aria-hidden="true">↗</span></a>
 </div>
 <div class="grid4" style="margin-top: 48px">
-<a class="card rv" href="https://www.youtube.com/watch?v=yg7fBFb25rY" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="yg7fBFb25rY" href="https://www.youtube.com/watch?v=yg7fBFb25rY" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #0F2537; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-macinatura-ceppi.webp" width="549" height="302" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Stump grinding with a Ghisotti auger</p>
 </a>
-<a class="card rv" href="https://www.youtube.com/watch?v=omay3ggQcSo" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="omay3ggQcSo" href="https://www.youtube.com/watch?v=omay3ggQcSo" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #173248; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-levatura-ceppi.webp" width="548" height="300" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Stump extraction with a crown</p>
 </a>
-<a class="card rv" href="https://www.youtube.com/watch?v=FBsfpej0XLs" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="FBsfpej0XLs" href="https://www.youtube.com/watch?v=FBsfpej0XLs" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #0F2537; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-trivella-lame-avvitate-1.webp" width="548" height="300" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Auger with bolt-on blades</p>
 </a>
-<a class="card rv" href="https://www.youtube.com/watch?v=N4jRROIOsd8" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
+<a class="card rv" data-yt="N4jRROIOsd8" href="https://www.youtube.com/watch?v=N4jRROIOsd8" style="text-decoration: none; color: #0F2537; background: #FFFFFF; display: block">
 <div style="aspect-ratio: 16/9; background: #173248; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="/assets/img/video-trivella-lame-avvitate-2.webp" width="549" height="300" loading="lazy" decoding="async" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"><svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="position: relative"><circle cx="28" cy="28" r="28" fill="#3274A0"></circle><path d="M23 18 L38 28 L23 38 Z" fill="#FFFFFF"></path></svg></div>
 <p style="padding: 18px; margin: 0; font-weight: 700; line-height: 1.35">Bolt-on blades: close-up at work</p>
 </a>
 </div>
+<p class="rv" style="margin: 20px 0 0; font-size: 14px; color: #3F505E">Videos open right here, only when you start them, and are served by YouTube in privacy-enhanced mode (youtube-nocookie.com).</p>
 </div>
 </section>
 <section id="faq" style="background: #FFFFFF; padding: clamp(80px,10vw,140px) 0">

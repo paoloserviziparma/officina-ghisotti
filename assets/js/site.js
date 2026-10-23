@@ -84,6 +84,108 @@
   window.addEventListener('resize', onScroll);
   onScroll();
 
+  var lang = (doc.getAttribute('lang') || 'it').slice(0, 2);
+  var L = {
+    it: { close: 'Chiudi il video', title: 'Video' },
+    en: { close: 'Close video', title: 'Video' },
+    fr: { close: 'Fermer la vidéo', title: 'Vidéo' }
+  }[lang] || { close: 'Chiudi', title: 'Video' };
+
+  // ---- Video: si caricano da YouTube (modalità privacy avanzata) solo al clic ----
+  var dlg = null, frameBox = null, lastTrigger = null;
+  function closeVideo() {
+    if (!dlg) return;
+    frameBox.innerHTML = '';            // ferma il video e scarica il player
+    if (dlg.open) dlg.close();
+    if (lastTrigger) lastTrigger.focus();
+  }
+  function openVideo(id, label, trigger) {
+    if (!dlg) {
+      dlg = document.createElement('dialog');
+      dlg.className = 'vmodal';
+      dlg.innerHTML = '<div class="vmodal-box"><button type="button" class="vmodal-x" aria-label="' + L.close +
+        '"><svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2"></path></svg></button>' +
+        '<div class="vmodal-frame"></div></div>';
+      document.body.appendChild(dlg);
+      frameBox = dlg.querySelector('.vmodal-frame');
+      dlg.querySelector('.vmodal-x').addEventListener('click', closeVideo);
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) closeVideo(); });
+      dlg.addEventListener('cancel', function (e) { e.preventDefault(); closeVideo(); });
+    }
+    lastTrigger = trigger;
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&modestbranding=1';
+    f.title = label || L.title;
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    frameBox.innerHTML = '';
+    frameBox.appendChild(f);
+    dlg.setAttribute('aria-label', f.title);
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
+  }
+  document.querySelectorAll('[data-yt]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;   // nuova scheda: lascia fare al browser
+      e.preventDefault();
+      var t = a.querySelector('p');
+      openVideo(a.getAttribute('data-yt'), t ? t.textContent.trim() : '', a);
+    });
+  });
+
+  // ---- Selettore "Quale attrezzatura per il mio escavatore?" ----
+  var finder = document.querySelector('.finder');
+  if (finder) {
+    var outs = finder.querySelectorAll('[data-result]');
+    var bigNote = finder.querySelector('[data-note="big"]');
+    var quoteBtn = finder.querySelector('[data-finder-quote]');
+    var pick = function (name) { var el = finder.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; };
+    var labelOf = function (name) {
+      var el = finder.querySelector('input[name="' + name + '"]:checked');
+      return el ? el.closest('label').textContent.trim() : '';
+    };
+    var current = '';
+    function decide() {
+      var goal = pick('f-goal'), place = pick('f-place'), size = pick('f-size');
+      if (!goal || !place || !size) return '';
+      if (size === 'big') return place === 'city' ? 'auger-hard' : 'auger';
+      if (goal === 'extract') return place === 'wood' ? 'crown-wings' : 'crown';
+      if (goal === 'grind') return place === 'city' ? 'auger-hard' : 'auger';
+      return place === 'wood' ? 'crown-wings' : (place === 'city' ? 'crown' : 'auger');   // "non so"
+    }
+    function render() {
+      current = decide();
+      outs.forEach(function (o) { o.hidden = o.getAttribute('data-result') !== current; });
+      var empty = finder.querySelector('[data-result="none"]');
+      if (empty) empty.hidden = !!current;
+      if (bigNote) bigNote.hidden = !(current && pick('f-size') === 'big' && pick('f-goal') === 'extract');
+      if (quoteBtn) quoteBtn.hidden = !current;
+    }
+    finder.addEventListener('change', render);
+    finder.addEventListener('submit', function (e) { e.preventDefault(); });
+    render();
+
+    if (quoteBtn) quoteBtn.addEventListener('click', function (e) {
+      var form = document.querySelector('form[name="preventivo"]');
+      var msg = form && form.querySelector('[name="messaggio"]');
+      if (!msg) return;
+      var shown = finder.querySelector('[data-result="' + current + '"] h3');
+      var t = finder.querySelector('[name="f-tons"]').value.trim();
+      var m = finder.querySelector('[name="f-model"]').value.trim();
+      var lines = [
+        finder.getAttribute('data-l-advice') + ': ' + (shown ? shown.textContent.trim() : ''),
+        finder.getAttribute('data-l-goal') + ': ' + labelOf('f-goal'),
+        finder.getAttribute('data-l-place') + ': ' + labelOf('f-place'),
+        finder.getAttribute('data-l-size') + ': ' + labelOf('f-size')
+      ];
+      if (t) lines.push(finder.getAttribute('data-l-tons') + ': ' + t + ' t');
+      if (m) lines.push(finder.getAttribute('data-l-model') + ': ' + m);
+      msg.value = lines.join('\n') + (msg.value ? '\n\n' + msg.value : '');
+      // l'ancora #contatti / #contact porta al modulo; il focus va al primo campo
+      setTimeout(function () { var n = form.querySelector('[name="nome"]'); if (n) n.focus({ preventScroll: true }); }, 600);
+    });
+  }
+
   // ---- Comparsa dei blocchi allo scroll ----
   if (reduce || !('IntersectionObserver' in window)) return;
   doc.classList.add('rv-ready');

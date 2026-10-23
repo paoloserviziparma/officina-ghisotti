@@ -10,11 +10,14 @@ Ogni modifica salvata sul ramo `main` di questo repository viene pubblicata auto
 | `index.html` | Home in italiano |
 | `en/index.html` | Home in inglese |
 | `fr/index.html` | Home in francese |
+| `corone/`, `trivelle/` | Pagine prodotto in italiano |
+| `en/crowns/`, `en/augers/` | Pagine prodotto in inglese |
+| `fr/couronnes/`, `fr/tarieres/` | Pagine prodotto in francese |
 | `privacy-policy/`, `cookie-policy/` | Documenti legali |
 | `grazie/`, `en/thank-you/`, `fr/merci/` | Pagine di conferma dopo l'invio del modulo |
 | `404.html` | Pagina "non trovata" |
 | `assets/css/` | `site.css` (home) e `legal.css` (pagine di servizio) |
-| `assets/js/site.js` | Menu mobile e animazioni di comparsa (nessun cookie) |
+| `assets/js/site.js` | Menu, intestazione a scomparsa, parallax, video al clic, selettore attrezzatura (nessun cookie) |
 | `assets/img/` | Logo, foto prodotti, miniature video, icone |
 | `assets/fonts/` | Archivo e IBM Plex Mono, ospitati in locale (licenza OFL) |
 | `netlify.toml` | Redirect dal vecchio sito Wix, intestazioni di sicurezza e cache |
@@ -27,6 +30,15 @@ Non c'è alcun passaggio di build: i file vengono pubblicati così come sono.
 Il modulo nelle tre home usa **Netlify Forms** (`name="preventivo"`). Le richieste compaiono in Netlify
 nella sezione *Forms*; per riceverle via e-mail: *Project configuration → Notifications → Emails and webhooks →
 Form submission notifications* con l'indirizzo `ghisotti.officina@gmail.com`.
+
+## Video
+
+Le anteprime sono immagini locali; il lettore YouTube (youtube-nocookie.com) si carica solo quando l'utente avvia un video.
+
+## Selettore attrezzatura
+
+Nella sezione 04 delle home: tre domande suggeriscono corona o trivella e precompilano il modulo preventivo.
+La logica è in `assets/js/site.js` (funzione `decide`); i testi dei consigli sono nell'HTML di ogni lingua.
 
 ## Statistiche
 

@@ -25,6 +25,54 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/"/>
   </url>
   <url>
+    <loc>https://www.officinaghisotti.it/corone/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/corone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/crowns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/couronnes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/corone/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/en/crowns/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/corone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/crowns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/couronnes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/corone/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/fr/couronnes/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/corone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/crowns/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/couronnes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/corone/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/trivelle/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/trivelle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/augers/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/tarieres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/trivelle/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/en/augers/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/trivelle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/augers/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/tarieres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/trivelle/"/>
+  </url>
+  <url>
+    <loc>https://www.officinaghisotti.it/fr/tarieres/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.officinaghisotti.it/trivelle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.officinaghisotti.it/en/augers/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.officinaghisotti.it/fr/tarieres/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.officinaghisotti.it/trivelle/"/>
+  </url>
+  <url>
     <loc>https://www.officinaghisotti.it/privacy-policy/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
