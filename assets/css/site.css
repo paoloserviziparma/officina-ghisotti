@@ -13,6 +13,19 @@ img{max-width:100%}
 :focus-visible{outline:3px solid #6FB1E6;outline-offset:3px}
 .wrap{max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
 
+/* Intestazione fissa: scompare in dissolvenza scorrendo in giù, ricompare scorrendo in su (site.js) */
+.site-head{position:fixed;top:0;left:0;right:0;z-index:50;transition:opacity .4s ease,transform .4s cubic-bezier(.2,.7,.2,1)}
+.site-head.is-hidden{opacity:0;transform:translateY(-14px);pointer-events:none}
+.site-nav{background:#0F2537;color:#F5F8FA;transition:box-shadow .3s ease}
+.site-head.is-scrolled .site-nav{box-shadow:0 14px 30px -14px rgba(5,15,25,.6)}
+.head-spacer{height:var(--head-h,137px);background:#0F2537}
+main section[id]{scroll-margin-top:24px}
+@media (max-width: 960px){.site-head.menu-open .site-nav{max-height:calc(100vh - 40px);overflow-y:auto}}
+
+/* Parallax (site.js) */
+[data-parallax],[data-parallax-x]{will-change:transform}
+.deco-ring{position:absolute;pointer-events:none}
+
 /* Navigazione */
 .nav{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center}
 .nav a{color:#E3EAF0;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:12px 0}

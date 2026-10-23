@@ -29,14 +29,14 @@
 <body id="top">
 <div style="font-family: 'Archivo', system-ui, sans-serif; color: #0F2537; background: #F5F8FA; overflow-x: hidden">
 
+<div class="site-head" id="site-head">
 <div style="background: #3274A0; color: #FFFFFF; font-size: 14px">
 <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; padding-top: 10px; padding-bottom: 10px">
 <p style="margin: 0; font-weight: 600">Free quote: <a href="tel:+393338017929" style="color: #FFFFFF">+39 333 80 17 929</a></p>
 <p class="mono" style="margin: 0; font-size: 13px">Shipping across Italy and worldwide</p>
 </div>
 </div>
-
-<header style="background: #0F2537; color: #F5F8FA; position: relative; overflow: hidden">
+<div class="site-nav">
 <div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 18px; padding-bottom: 18px; border-bottom: 1px solid #22445E; position: relative; z-index: 2">
 <a href="/en/" aria-label="Officina Agricola Ghisotti Emanuele, back to top" style="display: flex; align-items: center">
 <img src="/assets/img/logo-officina-ghisotti.webp" width="707" height="254" loading="eager" fetchpriority="high" decoding="async" alt="Officina Agricola Ghisotti Emanuele logo" style="height: 64px; width: auto; display: block; border-radius: 2px">
@@ -52,9 +52,14 @@
 <a href="#contact" class="btn" style="background: #3274A0; color: #FFFFFF; min-height: 44px; padding: 0 18px">Contact</a>
 </nav>
 </div>
+</div>
+</div>
+<div class="head-spacer" aria-hidden="true"></div>
+
+<header style="background: #0F2537; color: #F5F8FA; position: relative; overflow: hidden">
 
 <div class="wrap grid2" style="padding-top: clamp(56px,9vw,120px); padding-bottom: clamp(64px,9vw,128px); position: relative; z-index: 2">
-<div>
+<div data-parallax="0.07">
 <p class="eyebrow in6" style="color: #9FB6C9; margin-bottom: 28px"><span style="color: #3274A0">■</span>  Made in Italy · Villanova sull'Arda (Piacenza)</p>
 <h1 class="display" style="font-size: clamp(44px,5.6vw,84px)">
 <span class="in1" style="display: block">Augers</span>
@@ -68,7 +73,7 @@
 </div>
 </div>
 
-<div class="in6" style="display: flex; justify-content: center; align-items: center; position: relative; min-height: 420px">
+<div class="in6" data-parallax="0.22" style="display: flex; justify-content: center; align-items: center; position: relative; min-height: 420px">
 <svg viewBox="0 0 400 520" style="width: min(100%,420px); height: auto" aria-hidden="true">
 <defs>
 <clipPath id="auger-en"><path d="M120 120 L280 120 L250 430 L200 500 L150 430 Z"></path></clipPath>
@@ -140,7 +145,7 @@
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px">
 <div class="rv">
 <p class="eyebrow" style="color: #3274A0">02 — Stump removal crowns</p>
-<h2 class="display rvx" style="font-size: clamp(48px,7vw,104px); margin-top: 20px">Crowns</h2>
+<h2 class="display rvx" data-parallax-x="0.10" style="font-size: clamp(48px,7vw,104px); margin-top: 20px">Crowns</h2>
 </div>
 <p class="rv" style="max-width: 460px; font-size: 18px; line-height: 1.6; color: #2E3F4D; margin: 0">Crowns cut the soil around the stump and pull it out whole. Available with right- or left-hand rotation and, on request, with root-cutting wings.</p>
 </div>
@@ -158,7 +163,7 @@
 <div class="grid2" style="margin-top: 48px; align-items: stretch">
 <article class="card rv" style="background: #F5F8FA; display: flex; flex-direction: column">
 <div style="aspect-ratio: 16/10; background: #E3EAF0; display: flex; align-items: center; justify-content: center; padding: clamp(20px,3vw,40px); overflow: hidden">
-<img class="pimg" src="/assets/img/corona-ceppi-grossi.webp" width="846" height="625" loading="lazy" decoding="async" alt="Ghisotti stump removal crown for large stumps" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
+<img class="pimg" data-parallax="0.05" data-parallax-prop="translate" src="/assets/img/corona-ceppi-grossi.webp" width="846" height="625" loading="lazy" decoding="async" alt="Ghisotti stump removal crown for large stumps" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
 </div>
 <div style="padding: 32px; flex: 1">
 <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 12px">Crown for very large stumps</h3>
@@ -167,7 +172,7 @@
 </article>
 <article class="card rv" style="background: #F5F8FA; display: flex; flex-direction: column">
 <div style="aspect-ratio: 16/10; background: #E3EAF0; display: flex; align-items: center; justify-content: center; padding: clamp(20px,3vw,40px); overflow: hidden">
-<img class="pimg" src="/assets/img/corona-con-ali.webp" width="1033" height="501" loading="lazy" decoding="async" alt="Ghisotti stump removal crown with root-cutting wings" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
+<img class="pimg" data-parallax="0.05" data-parallax-prop="translate" src="/assets/img/corona-con-ali.webp" width="1033" height="501" loading="lazy" decoding="async" alt="Ghisotti stump removal crown with root-cutting wings" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
 </div>
 <div style="padding: 32px; flex: 1">
 <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 12px">Crown with root-cutting wings</h3>
@@ -178,12 +183,13 @@
 </div>
 </section>
 
-<section id="augers" style="background: #0F2537; color: #F5F8FA; padding: clamp(80px,10vw,140px) 0">
-<div class="wrap">
+<section id="augers" style="background: #0F2537; color: #F5F8FA; padding: clamp(80px,10vw,140px) 0; position: relative; overflow: hidden">
+<svg class="deco-ring" data-parallax="0.18" viewBox="0 0 400 400" aria-hidden="true" style="right: -140px; top: 40px; width: 560px; height: 560px; opacity: .22"><circle cx="200" cy="200" r="180" fill="none" stroke="#3274A0" stroke-width="6"></circle><g fill="#9FB6C9"><path d="M188 6 L216 20 L188 34 Z" transform="rotate(0 200 200)"></path><path d="M188 6 L216 20 L188 34 Z" transform="rotate(51 200 200)"></path><path d="M188 6 L216 20 L188 34 Z" transform="rotate(103 200 200)"></path><path d="M188 6 L216 20 L188 34 Z" transform="rotate(154 200 200)"></path><path d="M188 6 L216 20 L188 34 Z" transform="rotate(206 200 200)"></path><path d="M188 6 L216 20 L188 34 Z" transform="rotate(257 200 200)"></path><path d="M188 6 L216 20 L188 34 Z" transform="rotate(309 200 200)"></path></g></svg>
+<div class="wrap" style="position: relative">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px">
 <div class="rv">
 <p class="eyebrow" style="color: #3274A0">03 — Stump grinding augers</p>
-<h2 class="display rvx" style="font-size: clamp(48px,7vw,104px); margin-top: 20px">Augers</h2>
+<h2 class="display rvx" data-parallax-x="0.10" style="font-size: clamp(48px,7vw,104px); margin-top: 20px">Augers</h2>
 </div>
 <p class="rv" style="max-width: 460px; font-size: 18px; line-height: 1.6; color: #C5D3DF; margin: 0">Augers grind the stump and roots directly in the ground, reducing them to chips. Widths from 50 to 150 cm, right- or left-hand rotation, replaceable bolt-on blades.</p>
 </div>
@@ -197,7 +203,7 @@
 <div class="grid2" style="margin-top: 56px; align-items: stretch">
 <article class="card rv" style="background: #132C40; display: flex; flex-direction: column; border: 1px solid #22445E">
 <div style="aspect-ratio: 16/10; background: #E3EAF0; display: flex; align-items: center; justify-content: center; padding: clamp(20px,3vw,40px); overflow: hidden">
-<img class="pimg" src="/assets/img/trivella-ceppi-duri.webp" width="332" height="712" loading="lazy" decoding="async" alt="Ghisotti stump grinding auger for very hard stumps" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
+<img class="pimg" data-parallax="0.05" data-parallax-prop="translate" src="/assets/img/trivella-ceppi-duri.webp" width="332" height="712" loading="lazy" decoding="async" alt="Ghisotti stump grinding auger for very hard stumps" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
 </div>
 <div style="padding: 32px; flex: 1">
 <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 12px">Auger for very hard stumps</h3>
@@ -206,7 +212,7 @@
 </article>
 <article class="card rv" style="background: #132C40; display: flex; flex-direction: column; border: 1px solid #22445E">
 <div style="aspect-ratio: 16/10; background: #E3EAF0; display: flex; align-items: center; justify-content: center; padding: clamp(20px,3vw,40px); overflow: hidden">
-<img class="pimg" src="/assets/img/trivella-universale.webp" width="954" height="572" loading="lazy" decoding="async" alt="Ghisotti all-purpose stump grinding auger" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
+<img class="pimg" data-parallax="0.05" data-parallax-prop="translate" src="/assets/img/trivella-universale.webp" width="954" height="572" loading="lazy" decoding="async" alt="Ghisotti all-purpose stump grinding auger" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; object-fit: contain">
 </div>
 <div style="padding: 32px; flex: 1">
 <h3 style="font-size: 26px; font-weight: 800; margin: 0 0 12px">All-purpose auger</h3>
