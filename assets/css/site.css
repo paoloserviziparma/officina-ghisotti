@@ -47,7 +47,7 @@ main section[id]{scroll-margin-top:24px}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:clamp(32px,5vw,72px);align-items:center}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
 .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px}
-.display{font-family:'Archivo',sans-serif;font-stretch:108%;font-weight:850;line-height:.92;letter-spacing:-.02em;text-transform:uppercase;margin:0;hyphens:auto;overflow-wrap:break-word}
+.display{font-family:'Archivo',sans-serif;font-stretch:108%;font-weight:850;line-height:.92;letter-spacing:-.02em;text-transform:uppercase;margin:0;hyphens:manual;overflow-wrap:break-word}
 .mono{font-family:'IBM Plex Mono',monospace}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0}
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:transform .25s ease,background .25s ease}
@@ -89,3 +89,17 @@ input,textarea,button{font:inherit}
 .rv-ready .rvx:not(.is-in){clip-path:inset(0 0 100% 0);translate:0 30px}
 
 @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+
+/* Tabella "metodi a confronto": larga su desktop, schede impilate su telefono */
+.cmp{min-width:900px}
+@media (max-width: 760px){
+  .cmp-wrap{border:0 !important;overflow:visible !important}
+  .cmp{min-width:0}
+  .cmp thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:100%}
+  .cmp tr{border:1.5px solid #0F2537 !important;margin-bottom:14px}
+  .cmp tbody th{white-space:normal !important;font-size:18px;background:#0F2537;color:#F5F8FA;padding:14px 16px !important}
+  .cmp td{padding:10px 16px !important;white-space:normal !important;border-top:1px solid #D3DDE5}
+  .cmp tr[style*="#EAF2F8"] th{background:#3274A0 !important}
+  .cmp td::before{content:attr(data-label);display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4F6B82;margin-bottom:4px}
+}
