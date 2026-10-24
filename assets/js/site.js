@@ -113,23 +113,35 @@
       dlg.addEventListener('cancel', function (e) { e.preventDefault(); closeVideo(); });
     }
     lastTrigger = trigger;
-    var f = document.createElement('iframe');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&modestbranding=1';
+    var f;
+    if (id.type === 'mp4') {
+      // video ospitato sul sito: nessun servizio esterno
+      f = document.createElement('video');
+      f.src = id.src; f.controls = true; f.autoplay = true; f.playsInline = true;
+    } else {
+      f = document.createElement('iframe');
+      f.src = id.type === 'vimeo'
+        ? 'https://player.vimeo.com/video/' + encodeURIComponent(id.src) + '?dnt=1&autoplay=1'
+        : 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id.src) + '?autoplay=1&rel=0&modestbranding=1';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+    }
     f.title = label || L.title;
-    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-    f.allowFullscreen = true;
-    f.referrerPolicy = 'strict-origin-when-cross-origin';
     frameBox.innerHTML = '';
     frameBox.appendChild(f);
     dlg.setAttribute('aria-label', f.title);
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', '');
   }
-  document.querySelectorAll('[data-yt]').forEach(function (a) {
+  document.querySelectorAll('[data-yt], [data-vimeo], [data-mp4]').forEach(function (a) {
+    var v = a.hasAttribute('data-mp4') ? { type: 'mp4', src: a.getAttribute('data-mp4') }
+          : a.hasAttribute('data-vimeo') ? { type: 'vimeo', src: a.getAttribute('data-vimeo') }
+          : { type: 'yt', src: a.getAttribute('data-yt') };
     a.addEventListener('click', function (e) {
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;   // nuova scheda: lascia fare al browser
       e.preventDefault();
       var t = a.querySelector('p');
-      openVideo(a.getAttribute('data-yt'), t ? t.textContent.trim() : '', a);
+      openVideo(v, t ? t.textContent.trim() : '', a);
     });
   });
 
