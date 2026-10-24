@@ -25,6 +25,16 @@ Ogni modifica salvata sul ramo `main` di questo repository viene pubblicata auto
 
 Non c'è alcun passaggio di build: i file vengono pubblicati così come sono.
 
+## Foto della home
+
+Le 4 foto in dissolvenza nella parte iniziale delle home (`assets/img/hero-*.webp`) vengono da Unsplash
+(licenza Unsplash: uso commerciale gratuito, attribuzione non obbligatoria), virate sui toni del sito:
+
+- `hero-radici` – AJ (@cornthechicken), https://unsplash.com/photos/JcdHVCWE9N0
+- `hero-fresatura` – Zack Masters (@masters25), https://unsplash.com/photos/fhLeC-CUOUg
+- `hero-coclea` – vikram rathod (@vikram_rathod), https://unsplash.com/photos/vi_7gX9JMbU
+- `hero-anelli` – Gabriel Jimenez (@gabrielj_photography), https://unsplash.com/photos/HiE8X1yH0mc
+
 ## Modulo preventivo
 
 Il modulo nelle tre home usa **Netlify Forms** (`name="preventivo"`). Le richieste compaiono in Netlify
