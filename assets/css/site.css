@@ -146,23 +146,3 @@ input,textarea,button{font:inherit}
 .steps li::before{content:"0" counter(s);display:block;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#3274A0;margin-bottom:16px}
 .steps h3{margin:0 0 8px;font-size:20px;font-weight:800}
 .steps p{margin:0;line-height:1.6;color:#3F505E}
-
-/* Hero: 4 foto in dissolvenza incrociata (solo CSS, 24 s per giro) */
-.hero-media{position:relative;display:flex;justify-content:center;align-items:center;padding:28px}
-.hero-show{position:relative;margin:0;width:min(100%,500px);aspect-ratio:4/5;overflow:hidden;background:#173248;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);z-index:1}
-.hs{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:0;animation:hsfade 24s linear infinite}
-.hs1{opacity:1}
-.hs2{animation-delay:6s}.hs3{animation-delay:12s}.hs4{animation-delay:18s}
-@keyframes hsfade{0%{opacity:0;transform:scale(1.02)}5%{opacity:1}25%{opacity:1}30%{opacity:0;transform:scale(1.12)}100%{opacity:0;transform:scale(1.12)}}
-.hs1{animation-name:hsfade1}
-@keyframes hsfade1{0%{opacity:1;transform:scale(1.02)}25%{opacity:1}30%{opacity:0;transform:scale(1.12)}95%{opacity:0;transform:scale(1.02)}100%{opacity:1;transform:scale(1.02)}}
-.hero-show::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,37,55,.75),rgba(15,37,55,0) 38%);pointer-events:none}
-.hs-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;color:#E3EAF0;font-size:12px;letter-spacing:.14em}
-.hs-ticks{display:flex;gap:6px}
-.hs-tick{width:22px;height:3px;background:rgba(227,234,240,.3);position:relative;overflow:hidden}
-.hs-tick::after{content:"";position:absolute;inset:0;background:#E3EAF0;transform:scaleX(0);transform-origin:left;animation:hstick 24s linear infinite}
-.hs-t2::after{animation-delay:6s}.hs-t3::after{animation-delay:12s}.hs-t4::after{animation-delay:18s}
-@keyframes hstick{0%{transform:scaleX(0)}25%{transform:scaleX(1)}25.01%,100%{transform:scaleX(0)}}
-.hero-ring{position:absolute;width:62%;max-width:320px;aspect-ratio:1;right:-4%;top:-6%;z-index:0;opacity:.9}
-@media (max-width: 760px){.hero-media{padding:18px 8px}.hero-show{aspect-ratio:4/3}.hero-ring{width:46%;right:-6%;top:-4%}}
-@media (prefers-reduced-motion: reduce){.hs{opacity:0}.hs1{opacity:1}.hs-tick::after{transform:scaleX(0)}.hs-t1::after{transform:scaleX(1)}}
