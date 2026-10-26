@@ -198,6 +198,38 @@
     });
   }
 
+  // ---- Modulo preventivo: invio a Netlify Forms restando nella lingua della pagina ----
+  var M = {
+    it: { sending: 'Invio in corso…', error: 'Non è stato possibile inviare la richiesta. Riprova o scrivici a ghisotti.officina@gmail.com.' },
+    en: { sending: 'Sending…', error: 'Your request could not be sent. Please try again or email ghisotti.officina@gmail.com.' },
+    fr: { sending: 'Envoi en cours…', error: 'Votre demande n\'a pas pu être envoyée. Réessayez ou écrivez-nous à ghisotti.officina@gmail.com.' }
+  }[lang] || null;
+  document.querySelectorAll('form[data-netlify]').forEach(function (form) {
+    if (!M || !window.fetch) return;   // senza JS resta l'invio classico
+    var status = document.createElement('p');
+    status.setAttribute('role', 'status');
+    status.style.cssText = 'margin:0;font-size:14px;line-height:1.5';
+    form.appendChild(status);
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('[type="submit"]');
+      var body = new URLSearchParams(new FormData(form)).toString();
+      if (btn) btn.disabled = true;
+      status.style.color = '';
+      status.textContent = M.sending;
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body })
+        .then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          window.location.href = form.getAttribute('action');   // pagina di ringraziamento nella stessa lingua
+        })
+        .catch(function () {
+          if (btn) btn.disabled = false;
+          status.style.color = '#B42318';
+          status.textContent = M.error;
+        });
+    });
+  });
+
   // ---- Comparsa dei blocchi allo scroll ----
   if (reduce || !('IntersectionObserver' in window)) return;
   doc.classList.add('rv-ready');
