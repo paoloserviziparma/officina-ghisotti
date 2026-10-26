@@ -210,7 +210,7 @@
     en: { sending: 'Sending…', error: 'Your request could not be sent. Please try again or email ghisotti.officina@gmail.com.' },
     fr: { sending: 'Envoi en cours…', error: 'Votre demande n\'a pas pu être envoyée. Réessayez ou écrivez-nous à ghisotti.officina@gmail.com.' }
   }[lang] || null;
-  document.querySelectorAll('form[data-netlify]').forEach(function (form) {
+  document.querySelectorAll('form[name="preventivo"]').forEach(function (form) {   // Netlify toglie data-netlify in pubblicazione: si usa il nome
     if (!M || !window.fetch) return;   // senza JS resta l'invio classico
     var status = document.createElement('p');
     status.setAttribute('role', 'status');
