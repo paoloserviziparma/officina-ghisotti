@@ -6,6 +6,12 @@
   var btn = document.querySelector('.menu-btn');
   var nav = document.getElementById('menu');
 
+  // ---- Badge a scadenza (es. fiera): sparisce dopo la data indicata in data-until ----
+  document.querySelectorAll('[data-until]').forEach(function (el) {
+    var d = new Date(el.getAttribute('data-until') + 'T00:00:00');
+    if (!isNaN(d) && new Date() >= d) el.hidden = true;
+  });
+
   // ---- Menu mobile ----
   function setMenu(open) {
     if (!btn || !nav) return;
